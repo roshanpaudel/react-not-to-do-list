@@ -8,7 +8,11 @@ function App() {
 
   return (
     <>
-      <div></div>
+      <div class="wrapper pt-5">
+        <div class="container">
+          <h1 class="text-center">Not To Do List</h1>
+        </div>
+      </div>
     </>
   );
 }
