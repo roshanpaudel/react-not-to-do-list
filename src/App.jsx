@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import "./App.css";
 import { UserInput } from "./UserInput";
 import { Table } from "./Table";
+import { HoursBanner } from "./HoursBanner";
 
 function App() {
   const [habitData, setHabitData] = useState([]);
@@ -26,6 +27,31 @@ function App() {
       )
     );
   };
+
+  // 👇 We use the reduce() method to go through each habit one by one
+  // It helps us "reduce" the array into a single result (like a total count)
+  // We're building an object that stores 2 things:
+  // - totalHours (all hours combined)
+  // - badHabitHours (only hours from bad habits)
+  const { totalHours, badHabitHours } = habitData.reduce(
+    // totals is the object that keeps track of both totals
+    // habit is the current item we're looking at in the array
+    (totals, habit) => {
+      // ➕ Step 1: Add the current habit's hours to totalHours
+      totals.totalHours += Number(habit.hours);
+      // ❗ Step 2: Check if it's a bad habit
+      if (habit.isBadHabit) {
+        // ➕ If yes, also add its hours to badHabitHours
+        totals.badHabitHours += Number(habit.hours);
+      }
+      // 🔁 Always return the updated totals object so it moves to the next habit
+      return totals;
+    }, // 🏁 Initial value of totals (starts at 0 hours for both)
+    {
+      totalHours: 0,
+      badHabitHours: 0,
+    }
+  );
 
   return (
     <>
@@ -75,10 +101,15 @@ function App() {
                   )}
                 </table>
 
-                <div class="alert alert-success">
-                  You could have saved = <span id="savedHrsElm"></span> hr
-                </div>
+                <HoursBanner
+                  label="You could have saved "
+                  displayHours={badHabitHours}
+                />
               </div>
+              <HoursBanner
+                label="Total hours allocated "
+                displayHours={totalHours}
+              />
             </div>
           </div>
         </div>
