@@ -1,38 +1,40 @@
 import React from "react";
 
-export const UserInput = () => {
-
-  
+export const UserInput = ({ habitRef, hourRef, handleOnSubmit }) => {
   return (
     <div>
-      <form
-        onsubmit="handleOnSubmit"
-        action="javascript:void(0)"
-        class="border p-5 rounded shadow-lg mt-5"
-      >
-        <div class="row g-2">
-          <div class="col-md-7">
+      <form action="" className="border p-5 rounded shadow-lg mt-5">
+        <div className="row g-2">
+          <div className="col-md-7">
             <input
               type="text"
-              class="form-control"
-              placeholder="Task"
+              className="form-control"
+              placeholder="Enter Habits"
               aria-label="First name"
               name="task"
               id="task"
+              ref={habitRef}
             />
           </div>
-          <div class="col-md-2">
+          <div className="col-md-2">
             <input
               type="number"
-              class="form-control"
-              placeholder="40"
+              className="form-control"
+              placeholder="0"
               aria-label="Last name"
               name="hr"
               min="1"
+              ref={hourRef}
             />
           </div>
-          <div class="col-md-3 d-grid">
-            <button class="btn btn-primary">Add New Task</button>
+          <div className="col-md-3 d-grid">
+            <button
+              onClick={handleOnSubmit}
+              className="btn btn-primary"
+              type="submit"
+            >
+              Add New Task
+            </button>
           </div>
         </div>
       </form>
