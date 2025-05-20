@@ -107,7 +107,7 @@ function App() {
                 />
               </div>
               <HoursBanner
-                label="Total hours allocated "
+                label="Total hours allocated is "
                 displayHours={totalHours}
               />
             </div>
