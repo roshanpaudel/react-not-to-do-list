@@ -31,14 +31,14 @@ A responsive and beginner-friendly **Habit Tracker** web app built with **React*
 
 ## ⚙️ Tech Stack
 
-| Technology      | Purpose                         |
-|----------------|----------------------------------|
-| React (via Vite) | UI rendering and state management |
-| HTML & CSS      | Markup and styling               |
-| Bootstrap       | Responsive layout and components |
-| JavaScript (ES6+)| Application logic               |
-| Font Awesome    | Iconography                      |
-| Yarn            | Dependency management            |
+| Technology        | Purpose                           |
+| ----------------- | --------------------------------- |
+| React (via Vite)  | UI rendering and state management |
+| HTML & CSS        | Markup and styling                |
+| Bootstrap         | Responsive layout and components  |
+| JavaScript (ES6+) | Application logic                 |
+| Font Awesome      | Iconography                       |
+| Yarn              | Dependency management             |
 
 ---
 
@@ -47,8 +47,8 @@ A responsive and beginner-friendly **Habit Tracker** web app built with **React*
 ### 🔄 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/habit-tracker-app.git
-cd habit-tracker-app
+git clone https://github.com/roshanpaudel/react-not-to-do-list
+cd not-to-do-list
 📦 Install Dependencies
 Make sure you have Yarn installed.
 
@@ -68,7 +68,7 @@ Then open your browser at:
 php
 Copy
 Edit
-habit-tracker-app/
+not-to-do-list/
 ├── public/                   # Static assets
 │   └── favicon.ico
 ├── src/
@@ -78,8 +78,9 @@ habit-tracker-app/
 │   ├── main.jsx              # Entry point for React via Vite
 │   ├── Table.jsx             # Table to display habits component
 │   └── UserInput.jsx         #User input component
-│       
+│
 ├── index.html                # Base HTML template
 ├── package.json              # Project metadata and scripts
 ├── vite.config.js            # Vite configuration
 └── README.md
+```
