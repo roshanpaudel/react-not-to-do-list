@@ -72,13 +72,13 @@ habit-tracker-app/
 ├── public/                   # Static assets
 │   └── favicon.ico
 ├── src/
-│   ├── assets/           # Reusable React components (TaskList, HabitList, Form, etc.)
+│   ├── assets/               # Reusable React components (TaskList, HabitList, Form, etc.)
 │   ├── App.jsx               # Main application component
 │   ├── HoursBanner.jsx       # Banner card component
 │   ├── main.jsx              # Entry point for React via Vite
-│   ├── utils/                # Utility functions (e.g., ID generator)
-│   └── styles/               # Custom CSS or SCSS files
-│       └── styles.css
+│   ├── Table.jsx             # Table to display habits component
+│   └── UserInput.jsx         #User input component
+│       
 ├── index.html                # Base HTML template
 ├── package.json              # Project metadata and scripts
 ├── vite.config.js            # Vite configuration
