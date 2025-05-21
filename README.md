@@ -1,12 +1,84 @@
-# React + Vite
+# 🧠 Habit Tracker App (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and beginner-friendly **Habit Tracker** web app built with **React** and **Vite**. This application allows users to manage their daily tasks and habits, helping them visualize how they allocate their time and where they can make improvements.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **✅ Add New Tasks**  
+  Input a task name and estimated hours to add a task to your active task list.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **📋 Task List View**  
+  See all added tasks with corresponding hours in an interactive list.
+
+- **🚫 Habit List**  
+  Move tasks you want to reduce (bad habits) into a separate "Habits to Reduce" list.
+
+- **🔁 Task-Habit Switching**  
+  Seamlessly switch tasks between the Task List and Habit List with one click.
+
+- **⏱ Time Tracking**  
+  Instantly view total hours spent on tasks and the potential time saved if habits were avoided.
+
+- **🗑 Task Deletion**  
+  Remove tasks from either list with confirmation to avoid accidental deletions.
+
+- **💡 Responsive UI**  
+  Mobile and desktop-friendly layout powered by Bootstrap and Font Awesome.
+
+---
+
+## ⚙️ Tech Stack
+
+| Technology      | Purpose                         |
+|----------------|----------------------------------|
+| React (via Vite) | UI rendering and state management |
+| HTML & CSS      | Markup and styling               |
+| Bootstrap       | Responsive layout and components |
+| JavaScript (ES6+)| Application logic               |
+| Font Awesome    | Iconography                      |
+| Yarn            | Dependency management            |
+
+---
+
+## 🚀 Getting Started
+
+### 🔄 Clone the Repository
+
+```bash
+git clone https://github.com/your-username/habit-tracker-app.git
+cd habit-tracker-app
+📦 Install Dependencies
+Make sure you have Yarn installed.
+
+bash
+Copy
+Edit
+yarn install
+▶️ Start the Development Server
+bash
+Copy
+Edit
+yarn dev
+Then open your browser at:
+📍 http://localhost:5173/
+
+🔧 Project Structure
+php
+Copy
+Edit
+habit-tracker-app/
+├── public/                   # Static assets
+│   └── favicon.ico
+├── src/
+│   ├── assets/           # Reusable React components (TaskList, HabitList, Form, etc.)
+│   ├── App.jsx               # Main application component
+│   ├── main.jsx              # Entry point for React via Vite
+│   ├── utils/                # Utility functions (e.g., ID generator)
+│   └── styles/               # Custom CSS or SCSS files
+│       └── styles.css
+├── index.html                # Base HTML template
+├── package.json              # Project metadata and scripts
+├── vite.config.js            # Vite configuration
+└── README.md
