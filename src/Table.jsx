@@ -1,7 +1,6 @@
 import React from "react";
 
 export const Table = ({ deleteData, habitData, toggleBadHabit, index }) => {
-  console.log(habitData);
 
   return (
     <tbody id={habitData.isBadHabit ? "entryList" : "badList"}>

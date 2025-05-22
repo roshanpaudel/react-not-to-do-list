@@ -18,7 +18,6 @@ function App() {
     if (Number(inputObj.hours) + totalHours > 24 * 7) {
       return alert("Sorry that is too much hours for a week");
     } else {
-      console.log(Number(inputObj.hours), "hehe", totalHours);
       setHabitData((prevData) => [...prevData, inputObj]);
     }
   };
