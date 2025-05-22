@@ -16,7 +16,7 @@ function App() {
       isBadHabit: false,
     };
     if (Number(inputObj.hours) + totalHours > 24 * 7) {
-      return alert("Sorry that is too much hours for a week");
+      return alert("Sorry hours exceed the maximum limit for a week");
     } else {
       setHabitData((prevData) => [...prevData, inputObj]);
     }
