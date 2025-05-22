@@ -18,7 +18,9 @@ function App() {
     setHabitData((prevData) => [...prevData, inputObj]);
   };
   const deleteData = (objIndex) => {
-    setHabitData((prev) => prev.filter((_, index) => index !== objIndex));
+    if (window.confirm("Are you sure you want to delete this?")) {
+      setHabitData((prev) => prev.filter((_, index) => index !== objIndex));
+    }
   };
   const toggleBadHabit = (index) => {
     setHabitData((prevHabitData) =>

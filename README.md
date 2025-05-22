@@ -79,27 +79,33 @@ not-to-do-list/
 └── README.md
 ```
 
- ## 📚 How to Use the App
+## 📚 How to Use the App
 
 ### ➕ Add a Task
+
 - Enter task name in the **"Task"** input field.
 - Enter estimated hours in the **"Hours"** field.
 - Click **"Add new task"** to add it to the task list.
 
 ### 📋 View Entry List
+
 - All tasks appear under **"Entry List"**, showing the task name and hours.
 
 ### ➡️ Move to Habits
+
 - Click the **right arrow icon (➡️)** beside a task to move it to the **"Habits to Reduce"** list.
 
 ### ⬅️ Move Back to Task List
+
 - Click the **left arrow icon (⬅️)** in the Habits list to move the task back to the Task list.
 
 ### 🗑 Delete a Task
+
 - Click the **trash icon** to remove a task from either list.
 - Confirm the prompt to finalize the deletion.
 
 ### ⏱ Track Hours
+
 - **"Total Allocated Time"** shows the sum of all task hours.
 - **"You Could Have Saved"** shows the sum of all habit hours.
 
@@ -116,7 +122,7 @@ not-to-do-list/
 ## 📦 Scripts (via Yarn)
 
 | Command        | Action                          |
-|----------------|---------------------------------|
+| -------------- | ------------------------------- |
 | `yarn dev`     | Run the app in development mode |
 | `yarn build`   | Build the app for production    |
 | `yarn preview` | Preview the production build    |
@@ -150,4 +156,4 @@ You are free to use, modify, and distribute it.
 
 ---
 
-> ✨ *Made with React and a little bit of discipline. Happy habit tracking!*
+> ✨ _Made with React and a little bit of discipline. Happy habit tracking!_
