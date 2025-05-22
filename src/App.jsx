@@ -7,6 +7,7 @@ function App() {
   const [habitData, setHabitData] = useState([]);
   const habitRef = useRef();
   const hourRef = useRef();
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
     const inputObj = {
@@ -14,7 +15,12 @@ function App() {
       hours: hourRef.current.value,
       isBadHabit: false,
     };
-    setHabitData((prevData) => [...prevData, inputObj]);
+    if (Number(inputObj.hours) + totalHours > 24 * 7) {
+      return alert("Sorry that is too much hours for a week");
+    } else {
+      console.log(Number(inputObj.hours), "hehe", totalHours);
+      setHabitData((prevData) => [...prevData, inputObj]);
+    }
   };
   const deleteData = (objIndex) => {
     if (window.confirm("Are you sure you want to delete this?")) {
@@ -65,12 +71,12 @@ function App() {
             handleOnSubmit={handleOnSubmit}
           />
           <div>
-            <div class="row mt-5">
-              <div class="col-md">
-                <h3 class="text-center">Entry List</h3>
+            <div className="row mt-5">
+              <div className="col-md">
+                <h3 className="text-center">Entry List</h3>
                 <hr />
 
-                <table class="table table-striped table-hover border">
+                <table className="table table-striped table-hover border">
                   {habitData.map(
                     (habitData, index) =>
                       habitData.isBadHabit === false && (
@@ -84,11 +90,11 @@ function App() {
                   )}
                 </table>
               </div>
-              <div class="col-md">
-                <h3 class="text-center">Bad List</h3>
+              <div className="col-md">
+                <h3 className="text-center">Bad List</h3>
                 <hr />
 
-                <table class="table table-striped table-hover border">
+                <table className="table table-striped table-hover border">
                   {habitData.map(
                     (habitData, index) =>
                       habitData.isBadHabit === true && (
