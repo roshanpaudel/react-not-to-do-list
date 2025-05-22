@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import "./App.css";
 import { UserInput } from "./UserInput";
 import { Table } from "./Table";
 import { HoursBanner } from "./HoursBanner";
